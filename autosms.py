@@ -57,7 +57,7 @@ with open("sinavsaat.txt", "r",encoding="utf-8") as f:
         tumgsm = str(kursiyerler["GSM1"][i])
         tumgsm=tumgsm.replace(".0","")
         
-        if kursiyerler["TC KİMLİK"][i]== "":
+        if  pd.isna(kursiyerler["TC KİMLİK"][i])== True:
             continue            
         
         elif pd.isna(kursiyerler["GSM1"][i])== True:
